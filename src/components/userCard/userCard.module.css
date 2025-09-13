@@ -12,10 +12,12 @@
 .aticle {
     display: flex;
     flex-direction: column;
-    background-color: rgb(167, 14, 14);
-    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
     align-items: center;
-    position: relative;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 0 15px;
 }
 
 .firstName, 
@@ -28,5 +30,21 @@
 }
 
 .userImg {
-    
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid linear-gradient(2deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    border: 3px solid #5fce15;
+}
+
+.userInfo {
+    display: flex;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 50%;
+    background: #3F5EFB;
+    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
 }
