@@ -1,0 +1,32 @@
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+
+.aticle {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(167, 14, 14);
+    padding: 30px;
+    align-items: center;
+    position: relative;
+}
+
+.firstName, 
+.lastName, 
+.userName, 
+.gender,
+.isGender, 
+.followers {
+    padding: 10px;
+}
+
+.userImg {
+    
+}
