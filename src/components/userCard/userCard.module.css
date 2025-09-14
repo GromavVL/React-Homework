@@ -1,50 +1,102 @@
+* {
+  font-size: 24px;
+  box-sizing: border-box;
+}
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid;
-    height: 100vh;
-    background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgb(0, 255, 157), rgb(0, 180, 255));
+  height: 100vh;
+  padding: 20px;
 }
 
-
-.aticle {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    padding: 50px;
-    align-items: center;
-    border-radius: 15px;
-    width: 500px;
-    box-shadow: 0 0 15px;
+.article {
+  border-radius: 20px;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 380px;
+  text-align: center;
 }
 
-.firstName, 
-.lastName, 
-.userName, 
-.gender,
-.isGender, 
-.followers {
-    padding: 10px;
+.fullName {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
 }
 
 .userImg {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid linear-gradient(2deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    border: 3px solid #5fce15;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgb(183, 0, 255);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.userInfo {
-    display: flex;
+.bio {
+  position: relative;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
-    padding: 10px 15px;
-    border-radius: 50%;
-    background: #3F5EFB;
-    background: radial-gradient(circle,rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+  position: absolute;
+  background-color: rgb(0, 255, 157);
+  border: none;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  bottom: 0;
+  right: calc(50% - 20px);
+  transform: translateY(15px);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: rgb(0, 200, 120);
+  transform: translateY(12px) scale(1.05);
+}
+
+.userName {
+  font-weight: 700;
+  padding: 10px;
+  font-size: 16px;
+  color: gray;
+}
+
+.gender {
+  margin: 10px 0;
+  color: #444;
+  font-size: 15px;
+}
+
+.divFooter {
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 0 0 0;
+  gap: 10px;
+  border-top: 2px solid #eee;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.followers,
+.userLike {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
