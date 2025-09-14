@@ -6,7 +6,7 @@ function App() {
       lastName: 'Taylor',
       firstName: 'Swift',
       userName: '@Taylor123',
-      gender: 'Male',
+      gender: 'Female',
       followers: 21,
       likes: 5,
     }
