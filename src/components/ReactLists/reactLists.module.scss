@@ -1,0 +1,48 @@
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.mainHome {
+  width: 500px;
+  @include flex(column, flex-start, stretch);
+}
+
+.section {
+  @include flex(row, space-between, center);
+  padding: 15px;
+  border: 1px solid;
+  margin: 15px;
+  background-color: rgb(179, 179, 179)
+}
+
+.infoUser {
+  @include flex(row, flex-start, center);
+}
+
+.userAvatar {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.firstName {
+
+}
+
+.lastName {
+    padding: 0 10px;
+}
+
+.FullName {
+    @include flex(row, flex-start, center);
+    text-align: center;
+}
+
+.deleteButton {
+    cursor: pointer;
+    margin-right: 30px;
+}
