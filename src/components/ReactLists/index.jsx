@@ -39,13 +39,13 @@ class ReactList extends Component {
     };
   }
 
-
-  handlerDelete() {
-
-  }
+  handlerDelete = (id) => {
+    this.setState((prevState) => ({
+      users: prevState.users.filter((user) => user.id !== id),
+    }));
+  };
   render() {
     const { users } = this.state;
-    const {handlerDelete} = this.props;
     return (
       <main>
         {users.map((user) => (
@@ -59,7 +59,7 @@ class ReactList extends Component {
                 {/* <p>{user.id}</p> */}
               </div>
             </div>
-            <FaTrash className={styles.deleteButton} onClick={handlerDelete} />
+            <FaTrash className={styles.deleteButton} onClick={() => this.handlerDelete(user.id)} />
           </section>
         ))}
       </main>
