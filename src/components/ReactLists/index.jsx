@@ -33,7 +33,21 @@ class ReactList extends Component {
           firstName: "Dmytro",
           lastName: "Horobets",
           age: 27,
+          imgSrc: "https://cdn-icons-png.flaticon.com/128/13126/13126995.png",
+        },
+        {
+          id: 5,
+          firstName: "Danil",
+          lastName: "Kovalenko",
+          age: 21,
           imgSrc: "https://cdn-icons-png.flaticon.com/128/1177/1177568.png  ",
+        },
+        {
+          id: 6,
+          firstName: "Anna",
+          lastName: "Petrenko",
+          age: 23,
+          imgSrc: "https://cdn-icons-png.flaticon.com/128/3607/3607444.png",
         },
       ],
     };
@@ -47,19 +61,21 @@ class ReactList extends Component {
   render() {
     const { users } = this.state;
     return (
-      <main>
+      <main className={styles.main}>
         {users.map((user) => (
-          <section key={user.id} className={styles.section}>
+          <section key={user.id} className={styles.card}>
             <div className={styles.infoUser}>
               <img className={styles.userAvatar} src={user.imgSrc} />
-              <div className={styles.FullName}>
+              <div className={styles.fullName}>
                 <p className={styles.firstName}>{user.firstName}</p>
                 <p className={styles.lastName}>{user.lastName}</p>
                 <p>{user.age} years</p>
-                {/* <p>{user.id}</p> */}
               </div>
             </div>
-            <FaTrash className={styles.deleteButton} onClick={() => this.handlerDelete(user.id)} />
+            <FaTrash
+              className={styles.deleteButton}
+              onClick={() => this.handlerDelete(user.id)}
+            />
           </section>
         ))}
       </main>
