@@ -1,9 +1,8 @@
-import ReactList from "./components/ReactLists";
-import Calendar from './components/Calendar'
-
+import React from "react";
+import SignUpForm from './components/SignUpForm'
 
 function App() {
-  return <ReactList/>;
+  return <SignUpForm/>;
 }
 
 export default App;
