@@ -41,7 +41,9 @@ class UserCard extends Component {
             <p className={styles.firstName}>{firstName}</p>
           </div>
 
-          <p className={gender} style={genderStyle}>Gender: {gender}</p>
+          <p className={gender} style={genderStyle}>
+            Gender: {gender}
+          </p>
           <div className={styles.divFooter}>
             <p className={styles.followers}>Followers: {followers}</p>
             <p className={styles.userLike}>like: {likes}</p>

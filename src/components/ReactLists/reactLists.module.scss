@@ -6,7 +6,7 @@
   padding: 2rem;
   background: linear-gradient(135deg, #eef2ff, #f8f9ff);
   min-height: 100vh;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .card {
@@ -68,7 +68,9 @@
   color: #ef4444;
   font-size: 1.3rem;
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 
   &:hover {
     color: #dc2626;
