@@ -15,7 +15,6 @@ class UserCard extends Component {
       isSubscribed: true,
     }));
   };
-
   render() {
     const { user } = this.props;
     const { userImg, firstName, lastName, userName, gender, likes } = user;

@@ -1,9 +1,11 @@
-import React from "react";
-import SignUpForm from "./components/SignUpForm";
-import Calendar from "./components/Calendar";
+import UsersLoader from "./components/UsersLoader";
 
-function App() {
-  return <Calendar />;
+function App () {
+  return (
+    <>
+      <UsersLoader/>
+    </>
+  );
 }
 
 export default App;
