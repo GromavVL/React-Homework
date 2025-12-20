@@ -1,0 +1,89 @@
+.home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  .imagesUser {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+
+  .fullName {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .userMeta {
+    font-size: 1.2rem;
+    margin: 3px 0;
+  }
+
+  .userContact {
+    font-size: 0.9rem;
+    color: #4a90e2;
+    margin: 3px 0;
+    word-break: break-word;
+    text-align: center;
+  }
+
+  .userLocation {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+.male:hover {
+    box-shadow: 0 4px 15px blue;
+    transform: translateY(-5px);
+}
+
+.female:hover {
+    box-shadow: 0 4px 15px rgb(255, 0, 85);
+    transform: translateY(-5px);
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 10px 5px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #357ab7;
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+div {
+  text-align: center;
+  font-size: 1rem;
+  padding: 20px;
+}
