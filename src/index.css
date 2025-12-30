@@ -6,6 +6,8 @@
 * {
   box-sizing: border-box;
   font-family: sans-serif;
+  text-decoration: none;
+  color: inherit;
 }
 
 html,
