@@ -10,16 +10,13 @@ class UsersLoader extends Component {
       isFetching: false,
       error: null,
       currentPage: 1,
-      gender: null,
     };
   }
   loadUser = () => {
-    const { currentPage, gender } = this.state;
+    const { currentPage } = this.state;
     this.setState({ isFetching: true });
     fetch(
-      `https://randomuser.me/api?results=14&seed=pe2025&page=${currentPage}&gender=${
-        gender ? `&gender=${gender}` : ''
-      }`
+      `https://randomuser.me/api?results=14&seed=pe2025&page=${currentPage}`
     )
       .then(response => response.json())
       .then(data => this.setState({ users: data.results }))
@@ -30,8 +27,8 @@ class UsersLoader extends Component {
     this.loadUser();
   }
   componentDidUpdate (prevProps, prevState) {
-    const { currentPage, gender } = this.state;
-    if (currentPage !== prevState.currentPage || gender !== prevState.gender) {
+    const { currentPage } = this.state;
+    if (currentPage !== prevState.currentPage) {
       this.loadUser();
     }
   }
@@ -52,15 +49,10 @@ class UsersLoader extends Component {
     });
   };
   render () {
-    const { users, isFetching, error, gender } = this.state;
-    console.log(this.handlerGender);
+    const { users, isFetching, error } = this.state;
+    console.log(this.state.users);
     return (
       <>
-        <select value={gender ?? ''} onChange={this.handlerGender}>
-          <option value=''>За замовчуванням</option>
-          <option value='male'>Male</option>
-          <option value='female'>Female</option>
-        </select>
         <button onClick={this.prevPage} disabled={isFetching}>
           {'<'}
         </button>
