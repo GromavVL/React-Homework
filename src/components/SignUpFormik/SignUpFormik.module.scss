@@ -1,0 +1,11 @@
+.formWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+
+  .formBase {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
