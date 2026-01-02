@@ -31,6 +31,5 @@ export const SIGNAP_VALIDATION_SCHEMA = yup.object({
 
     acceptTerms: yup
     .boolean()
-    .oneOf([true], 'You must accept the terms and conditions')
-    .required('You must accept the terms and conditions')
+    .oneOf([true])
 })

@@ -18,42 +18,46 @@ function SignUpFormik () {
 
   return (
     <div className={styles.formWrapper}>
-      {/* <h1>Create Your Account</h1> */}
       <Formik
         initialValues={loginInitialValues}
         onSubmit={handleSubmit}
         validationSchema={SIGNAP_VALIDATION_SCHEMA}
       >
-        {formikProps => {
+        {({ values }) => {
           return (
             <Form className={styles.formBase}>
-              <h2>Sign up</h2>
-              <label>
-                <span>Full Name</span>
-                <Field type='text' name='fullName' autoFocus />
-                <ErrorMessage name='fullName' component={'span'} />
+              <h2 className={styles.title}>Sign up</h2>
+              <label className={styles.labelContainer}>
+                <span className={styles.labelText}>Full Name</span>
+                <Field className={styles.inputElement} type='text' name='fullName' autoFocus />
+                <ErrorMessage className={styles.errorComponent} name='fullName' component={'span'} />
+              </label>
+              <label className={styles.labelContainer}>
+                <span className={styles.labelText}>Email</span>
+                <Field className={styles.inputElement} type='email' name='email' />
+                <ErrorMessage className={styles.errorComponent} name='email' component={'span'} />
+              </label>
+              <label className={styles.labelContainer}>
+                <span className={styles.labelText}>Password</span>
+                <Field className={styles.inputElement} type='password' name='password' />
+                <ErrorMessage className={styles.errorComponent} name='password' component={'span'} />
+              </label>
+              <label className={styles.labelContainer}>
+                <span className={styles.labelText}>Confirm Password</span>
+                <Field className={styles.inputElement} type='password' name='confirmPassword' />
+                <ErrorMessage className={styles.errorComponent} name='confirmPassword' component={'span'} />
               </label>
               <label>
-                <span>Email</span>
-                <Field type='email' name='email' />
-                <ErrorMessage name='email' component={'span'} />
-              </label>
-              <label>
-                <span>Password</span>
-                <Field type='password' name='password' />
-                <ErrorMessage name='password' component={'span'} />
-              </label>
-              <label>
-                <span>Confirm Password</span>
-                <Field type='password' name='confirmPassword' />
-                <ErrorMessage name='confirmPassword' component={'span'} />
-              </label>
-              <label>
+                <Field
+                  className={styles.checkboxElement}
+                  type='checkbox'
+                  name='acceptTerms'
+                />
                 <span>I agree to the terms and conditions</span>
-                <Field type='checkbox' name='acceptTerms' />
-                <ErrorMessage name='acceptTerms' component={'span'} />
               </label>
-              <button type='submit'>Sign up</button>
+              <button className={styles.buttonSubmit} type='submit' disabled={!values.acceptTerms}>
+                Sign up
+              </button>
             </Form>
           );
         }}
