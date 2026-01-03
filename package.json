@@ -13,6 +13,8 @@
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "formik": "^2.4.9",
+    "i": "^0.3.7",
+    "npm": "^11.7.0",
     "prettier-format": "^4.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

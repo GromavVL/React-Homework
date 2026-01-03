@@ -1,0 +1,21 @@
+[33mc2cc900[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m495b8fa[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: commit: Add partial styles for signup form
+[33mc2cc900[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m HEAD@{2}: commit: Add Sign up component
+[33mffe3276[m HEAD@{3}: commit: Сonfigure routes
+[33mebed3f0[m HEAD@{4}: commit: Task react router dom
+[33m94f4f06[m HEAD@{5}: commit: Bug Fix
+[33mf5c8701[m HEAD@{6}: commit: Add handlerGender and style UserLoader
+[33m3a7d6f9[m HEAD@{7}: reset: moving to HEAD
+[33m3a7d6f9[m HEAD@{8}: commit: Add UserLoader
+[33m90387bb[m HEAD@{9}: commit: prettier format
+[33mfaacc9a[m HEAD@{10}: commit: Completed Task SignUp Form
+[33m96032f2[m HEAD@{11}: commit: Complered Task React. Lists
+[33m292289d[m HEAD@{12}: commit: Task React. Lists
+[33m3b5104e[m HEAD@{13}: commit: Add Calendar
+[33m720b96c[m HEAD@{14}: commit: Add ReactList
+[33m00fc5ea[m HEAD@{15}: reset: moving to HEAD
+[33m00fc5ea[m HEAD@{16}: commit: Completed Task React User Card
+[33m54d8296[m HEAD@{17}: commit: Improved card style
+[33mb3059d9[m HEAD@{18}: commit: Add style cart
+[33m63f71c2[m HEAD@{19}: commit: Add React User Card
+[33me7cfe89[m HEAD@{20}: commit (initial): Initial commit
