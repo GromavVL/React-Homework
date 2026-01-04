@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+
 export const loading = async (page = 1) => {
     try {
         const response = await axios.get(`https://randomuser.me/api`, {
