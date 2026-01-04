@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from './UsersLoader.module.scss';
 import classNames from 'classnames';
+import { loading } from '../../api/index';
 
 class UsersLoader extends Component {
   constructor (props) {
@@ -12,16 +13,17 @@ class UsersLoader extends Component {
       currentPage: 1,
     };
   }
-  loadUser = () => {
+  loadUser = async () => {
     const { currentPage } = this.state;
-    this.setState({ isFetching: true });
-    fetch(
-      `https://randomuser.me/api?results=14&seed=pe2025&page=${currentPage}`
-    )
-      .then(response => response.json())
-      .then(data => this.setState({ users: data.results }))
-      .catch(e => this.setState({ error: e }))
-      .finally(() => this.setState({ isFetching: false }));
+    this.setState({ isFetching: true, error: null });
+    try {
+      const users = await loading(currentPage);
+      this.setState({ users });
+    } catch ({ error }) {
+      setState({ error });
+    } finally {
+      this.setState({ isFetching: false });
+    }
   };
   componentDidMount () {
     this.loadUser();
