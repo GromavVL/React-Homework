@@ -22,6 +22,9 @@ function Header () {
             <li>
               <Link to='/sigformik'>SignUpFormik</Link>
             </li>
+            <li>
+              <Link to='/weather'>CurrentWeather</Link>
+            </li>
           </ul>
         </nav>
       </header>
