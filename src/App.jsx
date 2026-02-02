@@ -6,6 +6,7 @@ import Header from './components/Header';
 import NotFoundPage from './components/notFound';
 import SignUpFormik from './components/SignUpFormik';
 import CurrentWeather from './components/CurrentWeather';
+import UserForm from './components/UserForm';
 
 function App () {
   return (
@@ -18,6 +19,7 @@ function App () {
             <Route path='/signup' element={<SignUpForm />} />
             <Route path='/sigformik' element={<SignUpFormik />} />
             <Route path='/weather' element={<CurrentWeather />} />
+            <Route path='/userpage' element={<UserForm />} />
             <Route path='*' element={<NotFoundPage />} />
           </Route>
         </Routes>

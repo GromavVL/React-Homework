@@ -25,6 +25,9 @@ function Header () {
             <li>
               <Link to='/weather'>CurrentWeather</Link>
             </li>
+            <li>
+              <Link to='/userpage'>UserForm</Link>
+            </li>
           </ul>
         </nav>
       </header>
